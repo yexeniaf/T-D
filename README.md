@@ -2,7 +2,7 @@
 Yexenia Flores
 ## Project Name
 
-The name of your project.
+Forever Friends
 
 ## Project Description
 
