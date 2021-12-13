@@ -24,11 +24,14 @@ the Second one will be ( https://developer.edamam.com/) so it can give a random 
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-##Mobile
+Mobile
 
 <img width="261" alt="Screen Shot 2021-12-12 at 10 22 18 PM" src="https://user-images.githubusercontent.com/92563217/145753706-dee2c685-4f9e-4ae7-a65b-4dec5e90fed1.png">
 
-##Window
+Window
+
+![Screen Shot 2021-12-12 at 11 54 34 PM](https://user-images.githubusercontent.com/92563217/145754593-7380773b-91d6-4cbd-a927-8c8c7d2cb1ec.png)
+
 
 ### MVP/PostMVP
 
