@@ -30,7 +30,7 @@ Mobile
 
 Window
 
-![Screen Shot 2021-12-12 at 11 54 34 PM](https://user-images.githubusercontent.com/92563217/145754593-7380773b-91d6-4cbd-a927-8c8c7d2cb1ec.png)
+<img width="878" alt="Screen Shot 2021-12-13 at 9 18 10 AM" src="https://user-images.githubusercontent.com/92563217/145828746-b0fb5381-d767-4974-868d-8c5ed16f8355.png">
 
 
 ### MVP/PostMVP
