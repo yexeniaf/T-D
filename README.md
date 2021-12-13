@@ -12,7 +12,9 @@ This will be a Tappas and Drinks app where the person can find a drink that they
 
 I am using two API's for my app, the first one is for making cocktails (https://www.thecocktaildb.com/api.php), I will be setting it up so the user can search by name.  
 
-the Second one will be ( https://developer.edamam.com/) so it can give a random snack that can go with their drink that they looked up. 
+
+
+The Second one will be ( https://developer.edamam.com/) so it can give a random snack that can go with their drink that they looked up. 
 
 
 ## Wireframes
@@ -21,19 +23,23 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Generate the cocoktail that the person is going to search for 
+- Lay out the name, ingredients, and steps to make the drink
+- Post the image of the drink
+- Generate a random snack that they can make
+- Display the ingredients of the snack 
+- Post the image of the snack
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
+- Add dropdown menu to see cocktails by liquor
+- Add search for specific snack user wants to make
+- create a more creative design to the app 
 - Use local storage to save user favorites
 
 ## Project Schedule
@@ -44,7 +50,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Dec 13| Project Approval | Incomplete
 |Dec 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Dec 14| Pseudocode / actual code | Incomplete
@@ -64,9 +70,21 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| HTML | H | 3hrs|  |  |
+| CSS | H | 3hrs|  |  |
+| JAVASCRIPT | H | 4hrs|  |  |
+| API | H |2hrs|  |  |
+|LAYOUT| H | 4hrs|  |  |
+|IMAGES| H | 4hrs| | |
+|DEBUGGING| H | 3hrs | | |
+| DATA CONNECTION | H | 6hrs|  |  |
+| CCS DESIGN | H | 5hrs|  |  |
+| ADVANCE DEGISN | L | 1hr|  |  |
+| MORE BUTTONS| M | 1hr| | |
+| TESTING| H | 3hrs | | |
+|POSTMVP| L | 3hrs | | |
+| Total | H | 45hrs|  |  |
+
 
 ## Code Snippet
 
