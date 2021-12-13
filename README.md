@@ -2,11 +2,11 @@
 Yexenia Flores
 ## Project Name
 
-
+T & D 
 
 ## Project Description
 
-
+This will be a Tappas and Drinks app where the person can find a drink that they wish to make. The second part will be for them to get a random tappas or snack that they can make so it can go along with their drink. 
 
 ## API and Data Sample
 
