@@ -2,15 +2,18 @@
 Yexenia Flores
 ## Project Name
 
-Forever Friends
+
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+I am using two API's for my app, the first one is for making cocktails (https://www.thecocktaildb.com/api.php), I will be setting it up so the user can search by name.  
+
+the Second one will be ( https://developer.edamam.com/) so it can give a random snack that can go with their drink that they looked up. 
+
 
 ## Wireframes
 
