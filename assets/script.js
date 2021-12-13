@@ -14,15 +14,14 @@ async function fetch(cocktail) {
     }
 }
 
-function showCountryData(data) {
+function showCocktailData(data) {
     console.log(data);
   
     
     const cocktailName = document.createElement("h2");
     cocktailyName.innerText = `${data.strDrink} ${data.strImageSource}`;
-    cocktailDiv.appendChild(cocktailName);
+    cocktailDiv.appendChild(cocktaillName);
   
-    // Add Country Flag Img
     const cocktailImg = document.createElement("img");
     cocktailImg.src = data.cocktails.svg;
     console.dir(cocktailImg);
@@ -40,8 +39,8 @@ function showCountryData(data) {
   // Step 5: Dynamically search country using HTML form with eventHandler
   
   // Write eventHandler here
-  const searchForm = document.querySelector("#country-form");
-  const searchInput = document.querySelector("#country-search");
+  const searchForm = document.querySelector("#cocktail-form");
+  const searchInput = document.querySelector("#cocktail-search");
   
   searchForm.addEventListener("submit", handleSubmit);
   
@@ -52,13 +51,7 @@ function showCountryData(data) {
     searchInput.value = "";
     console.log(inputValue);
     fetchData(inputValue);
-    removeCountry();
-  }
-  
-  // Step 6: Remove previous country data
-  
-  function removeCountry() {
     // write code here
     // Make sure to call this function???
-    countryDiv.innerHTML = "";
+    cocktailDiv.innerHTML = "";
   }
