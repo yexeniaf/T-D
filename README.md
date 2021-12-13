@@ -22,6 +22,15 @@ The Second one will be ( https://developer.edamam.com/) so it can give a random 
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
+Mobile
+
+<img width="261" alt="Screen Shot 2021-12-12 at 10 22 18 PM" src="https://user-images.githubusercontent.com/92563217/145753706-dee2c685-4f9e-4ae7-a65b-4dec5e90fed1.png">
+
+Window
+
+<img width="878" alt="Screen Shot 2021-12-13 at 9 18 10 AM" src="https://user-images.githubusercontent.com/92563217/145828746-b0fb5381-d767-4974-868d-8c5ed16f8355.png">
+
+
 ### MVP/PostMVP
 
 
@@ -85,7 +94,6 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | TESTING| H | 3hrs | | |
 |POSTMVP| L | 3hrs | | |
 | Total | H | 45hrs|  |  |
-
 
 ## Code Snippet
 
