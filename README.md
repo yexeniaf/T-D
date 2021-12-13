@@ -31,14 +31,19 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Generate the cocoktail that the person is going to search for 
+- Lay out the name, ingredients, and steps to make the drink
+- Post the image of the drink
+- Generate a random snack that they can make
+- Display the ingredients of the snack 
+- Post the image of the snack
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
+- Add dropdown menu to see cocktails by liquor
+- Add search for specific snack user wants to make
+- create a more creative design to the app 
 - Use local storage to save user favorites
 
 ## Project Schedule
