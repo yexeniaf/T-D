@@ -17,6 +17,8 @@ I am using two API's for my app, the first one is for making cocktails (https://
 
 the Second one will be ( https://developer.edamam.com/) so it can give a random snack that can go with their drink that they looked up. 
 
+![Screen Shot 2021-12-12 at 10 15 31 PM](https://user-images.githubusercontent.com/92563217/145749590-0419858f-ff58-4dbd-99cc-9ec64e670828.png)
+
 
 ## Wireframes
 
