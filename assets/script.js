@@ -1,6 +1,6 @@
 const cocktailDiv = document.querySelector("#cocktail-data");
 
-async function fetch(cocktail) {
+async function showCocktail(cocktail) {
     try{
         const url = `www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`;
         const res = await axios.get(url);
@@ -19,26 +19,17 @@ function showCocktailData(data) {
   
     
     const cocktailName = document.createElement("h2");
-    cocktailyName.innerText = `${data.strDrink} ${data.strImageSource}`;
-    cocktailDiv.appendChild(cocktaillName);
+    cocktailName.innerText = `${data.drinks.strDrink} ${data.strImageSource}`;
+    cocktailDiv.appendChild(cocktailName);
   
     const cocktailImg = document.createElement("img");
-    cocktailImg.src = data.cocktails.svg;
+    cocktailImg.src = data.strImageSource.jpg;
     console.dir(cocktailImg);
-    cocktailImg.alt = `Image of ${data.strDrink}`;
+    cocktailImg.alt = `Image of ${data.drinks.strDrink}`;
     cocktailDiv.appendChild(cocktailImg);
   
-    const cocktailCurr = document.createElement("img");
-    cocktailImg.src = data.strImageSource;
-    console.dir(cocktailImg);
-    cocktailImg.alt = `Image of ${data.strDrink}`;
-    cocktailDiv.appendChild(cocktailImg);
-    //   // ???
   }
   
-  // Step 5: Dynamically search country using HTML form with eventHandler
-  
-  // Write eventHandler here
   const searchForm = document.querySelector("#cocktail-form");
   const searchInput = document.querySelector("#cocktail-search");
   
@@ -51,7 +42,10 @@ function showCocktailData(data) {
     searchInput.value = "";
     console.log(inputValue);
     fetchData(inputValue);
-    // write code here
-    // Make sure to call this function???
+    removeCountry();
+}
+
+function removeCountry() {
+
     cocktailDiv.innerHTML = "";
-  }
+  } 

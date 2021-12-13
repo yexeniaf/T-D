@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>T & D</title>
-    <link defer href="./style.css" rel="stylesheet"/>
-    <script></script>
 </head>
+
 <body>
     
-    <nav>
+   
+    <header>
         <h1>T & D</h1>
         <form id="cocktail-form">
           <input 
@@ -19,8 +21,15 @@
             placeholder="Find Cocktail" 
             id="cocktail-search" 
           />
-          <button>"Get Mixing "</button>
+          <button>"Get Mixing"</button>
         </form>
-    </nav>
+    </header>
+
+    <div 
+    style="margin-top: 25px;"
+     id="cocktail-data">
+    </div>
+
+  
 </body>
 </html>
