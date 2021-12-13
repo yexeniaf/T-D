@@ -24,6 +24,10 @@ the Second one will be ( https://developer.edamam.com/) so it can give a random 
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
+Mobile:
+<img width="261" alt="Screen Shot 2021-12-12 at 10 22 18 PM" src="https://user-images.githubusercontent.com/92563217/145753706-dee2c685-4f9e-4ae7-a65b-4dec5e90fed1.png">
+
+
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
@@ -54,7 +58,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Dec 13| Project Approval | Incomplete
 |Dec 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Dec 14| Pseudocode / actual code | Incomplete
