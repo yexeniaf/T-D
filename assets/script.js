@@ -1,8 +1,9 @@
+
 const cocktailDiv = document.querySelector("#cocktail-data");
 
-async function showCocktail(cocktail) {
+async function fetchData(cocktail) {
     try{
-        const url = `www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`;
+        const url = `https://thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`;
         const res = await axios.get(url);
         const cocktailData = res.data;
         console.log(cocktailData);
