@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
     <title>T & D</title>
 </head>
 
@@ -15,52 +16,42 @@
     <header>
         <h1>T & D</h1>
         <div> 
-        <nav> 
-            <button id="Tappas">Tappas Roulette</button>        
-            <form id="cocktail-form">
-                <input 
-                  type="text" 
-                  name="cocktail" 
-                  placeholder="Find Your" 
-                  id="cocktail-search" 
-                />
-                <button>"Get Mixing"</button>
-              </form>
-        </nav>
+            <nav>        
+                <button id="Tappas">Tappas Roulette</button> 
+                <button id="Drink">Drink Roulette</button>
+            </nav>        
         </div>
     </header>
     
     <div id="About">
         <h3 id="About Us">Tappas and Drinks is the go to place when you want to have a drink but arent sure what to pair it with. Just simply search your fav drink and then hit the Tappas Roulette button for a random snack to make. </h3>
     </div>
-
-    <div>
-        <p></p>
-    </div>
-
-    <div id="Cocktail-Result">
-        <div id="Cocktail-Name"></div>
-    </div>
     
-    <div id="Tappas-Result">
-
+    <div>
+        <form id="cocktail-form">
+        <input 
+          type="text" 
+          name="cocktail" 
+          placeholder="Find Your" 
+          id="cocktail-search" 
+        />
+        <button>"Get Mixing"</button>
+        </form>
     </div>
-
-
 
     <div 
-    style="margin-top: 25px;"
-     id="cocktail-data">
-    </div>
-
-   
+        style="margin-top: 25px;"
+        id="cocktail-result"></div>
+    
+    <div id="Tappas-Result"></div>
 
   
 </body>
 
-<footer>
+<!-- <footer>
         <h2>Enjoy responsibly</h2>
-</footer>
+</footer> -->
 
 
 </html>
+
