@@ -1,49 +1,49 @@
+
 const DOMAIN = 'https://www.thecocktaildb.com';
-const drinkDiv = document.querySelector("#cocktail-result");
+const drinkDiv = document.querySelector("#drink-container");
+const searchForm = document.querySelector("#drink-form");
+const drinkSearchInput = document.querySelector("#drink-search");
 
 async function fetchData(drink) {
   try {
     const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`;
-    
-    
-    
-    
-    
     const res = await axios.get(url);
     const drinkData = res.data;
-    // console.log(drinkData);
-    // drinkData.forEach((drinkObj) => {
-    //   showDrinkData(drinkObj[0]);
-    // })
     showDrinkData(drinkData);
   } catch (error) {
-    // displayErrorMessage();
-  }
+    }
 }
-
-// function displayErrorMessage() {
-//   const errorImg = document.createElement("img");
-//   errorImg.src = "https://i.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.webp";
-//   errorImg.alt = "404 ghost error";
-//   errorImg.style.margin = "0 auto";
-//   errorImg.style.display = "block";
-//   drinkDiv.appendChild(errorImg);
-// }
-
-function placeHolder() {
-  const h4 = document.createElement("h4");
-  h4.innerText = "Search here for a drink!";
-  drinkDiv.appendChild(h4);
-}
-
-placeHolder();
 
 
 function showDrinkData(data) {
   console.log(data);
 
-  const drinkName = document.querySelector("#cocktail-result")
-  drinkName.innerText = `${data.drinks[0].strDrink}`;
+  const drinkName = document.querySelector("#drink-result")
+  data.drinks.forEach(drink => {
+    const div = document.createElement("div")
+    const h2 = document.createElement("h2")
+    h2.innerText = drink.strDrink
+    div.appendChild(h2)
+
+    const img = document.createElement("img")
+    img.src = drink.strDrinkThumb
+    div.appendChild(img)
+
+    for (const [key, value] of Object.entries(drink)) {
+     if (key.includes("strIngredient")) {
+       if (value) {
+         const h3 = document.createElement("h3")
+         h3.innerText = value
+         div.appendChild(h3)
+       }
+     } 
+    }
+
+    drinkName.appendChild(div)
+  });
+
+
+  drinkName.innerText = `${data.drinks[i].strDrink}`;
   drinkDiv.appendChild(drinkName);
 
   const drinkImg = document.createElement("img");
@@ -53,23 +53,17 @@ function showDrinkData(data) {
   drinkDiv.appendChild(drinkImg);
 }
 
-const searchForm = document.querySelector("#cocktail-form");
-const searchInput = document.querySelector("#cocktail-search");
 
 searchForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-  console.log(searchInput.value);
-  let inputValue = searchInput.value;
-  searchInput.value = "";
+  console.log(drinkSearchInput.value);
+  let inputValue = drinkSearchInput.value;
+  drinkSearchInput.value = "";
   console.log(inputValue);
   fetchData(inputValue);
-//   removedrink();
 }
 
 
-// function removedrink() {
- 
-//   drinkDiv.innerHTML = "";
-// }
+
