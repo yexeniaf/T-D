@@ -21,14 +21,14 @@ async function fetchData(drink) {
   }
 }
 
-function displayErrorMessage() {
-  const errorImg = document.createElement("img");
-  errorImg.src = "https://i.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.webp";
-  errorImg.alt = "404 ghost error";
-  errorImg.style.margin = "0 auto";
-  errorImg.style.display = "block";
-  drinkDiv.appendChild(errorImg);
-}
+// function displayErrorMessage() {
+//   const errorImg = document.createElement("img");
+//   errorImg.src = "https://i.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.webp";
+//   errorImg.alt = "404 ghost error";
+//   errorImg.style.margin = "0 auto";
+//   errorImg.style.display = "block";
+//   drinkDiv.appendChild(errorImg);
+// }
 
 function placeHolder() {
   const h4 = document.createElement("h4");
@@ -65,11 +65,11 @@ function handleSubmit(event) {
   searchInput.value = "";
   console.log(inputValue);
   fetchData(inputValue);
-  removedrink();
+//   removedrink();
 }
 
 
-function removedrink() {
+// function removedrink() {
  
-  drinkDiv.innerHTML = "";
-}
+//   drinkDiv.innerHTML = "";
+// }
