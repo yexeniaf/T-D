@@ -39,6 +39,11 @@ function showDrinkData(data) {
      } 
     }
 
+    const h4 = document.createElement("h4")
+    h4.innerText = drink.strInstructions
+    div.appendChild(h4)
+
+
     drinkName.appendChild(div)
   });
 
