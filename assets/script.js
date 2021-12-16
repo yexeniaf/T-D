@@ -76,25 +76,21 @@ function showDrinkData(data) {
     h4.innerText = drink.strGlass
     div.appendChild(h4)
 
+
     for (const [key, value] of Object.entries(drink)) {
-      if (key.includes("strMeasure")) {
+      if (key.includes("strIngredient")) {
         if (value) {
+          const num = key.split('strIngredient')
           const h3 = document.createElement("h3")
-          h3.innerText = value
+          if (drink[`strMeasure${num[1]}`]) {
+            h3.innerText = `${drink[`strMeasure${num[1]}`]} ${value}`
+          } else {
+           h3.innerText = value
+          }
           div.appendChild(h3)
         }
       } 
      }
-
-    for (const [key, value] of Object.entries(drink)) {
-     if (key.includes("strIngredient")) {
-       if (value) {
-         const h3 = document.createElement("h3")
-         h3.innerText = value
-         div.appendChild(h3)
-       }
-     } 
-    }
 
     const h3 = document.createElement("p1")
     h3.innerText = drink.strInstructions
