@@ -12,30 +12,31 @@ const DOMAIN2 = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_i
 const displayTappas = (tappas) => {
   tappasDiv.innerHTML = "";
   console.log(tappas);
-  tappas.forEach((app) => {
-    console.log(app.hits.recipe.label)
-    console.log(app.hits.recipe.REGULAR.url)
+  // tappas.forEach((app) => {
     let h3 = document.createElement("h3")
-    h3.innerText = `${app.hits.recipe.label}`;
+    h3.innerText = `${tappas[0].recipe.label}`;
     tappasDiv.appendChild(h3)
 
     let img = document.createElement("img");
-    img.src = app.hits.recipe.REGULAR.url;
-    img.alt = app.hits.recipe.label;
+    img.src = tappas[0].recipe.images.REGULAR.url;
+    img.alt = tappas[0].recipe.label;
     tappasDiv.appendChild(img);
 
-    let h2 = document.createElement("h2");
-    h2.innerText = `${app.hits.recipe.url}`;
-    tappasDiv.appendChild(h2)
-  });
+    let a = document.createElement("a");
+    a.href = `${tappas[0].recipe.url}`;
+    a.innerText = "Click Here"
+    tappasDiv.appendChild(a)
+  // });
 }
 
 const fetchTappas = () => {
+  console.log("here")
   axios
     .get("https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true")
     .then((response) => {
-      let tappas = response.data.results;
-      displayUsers(tappas);
+      console.log(response)
+      let tappas = response.data.hits;
+      displayTappas(tappas);
     })
     .catch((error) => {
       console.log("HELLO THIS IS AN ERROR");
@@ -44,7 +45,7 @@ const fetchTappas = () => {
     .finally(() => console.log("done"));
 };
 
-const tappasButton = document.querySelector("#tappas-container");
+const tappasButton = document.querySelector("#button");
 tappasButton.addEventListener("click", fetchTappas);
 
 ////////////////////////////////////////////////////////////
