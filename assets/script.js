@@ -66,7 +66,7 @@ function showDrinkData(data) {
   console.log(data);
 
   const drinkName = document.querySelector("#drink-result")
-  data.drinks.forEach(drink => {
+  // data.drinks.forEach(drink => {
     const div = document.createElement("div")
     const h2 = document.createElement("h2")
     h2.innerText = drink.strDrink
@@ -101,7 +101,7 @@ function showDrinkData(data) {
     div.appendChild(img)
 
     drinkName.appendChild(div)
-  });
+  // });
 
 
   drinkName.innerText = `${data.drinks[i].strDrink}`;
