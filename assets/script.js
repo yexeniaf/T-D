@@ -4,36 +4,55 @@ const drinkDiv = document.querySelector("#drink-container");
 const searchForm = document.querySelector("#drink-form");
 const drinkSearchInput = document.querySelector("#drink-search");
 
-// const tappasButton = document.querySelector("#Tappas");
-// const ID = "4874856d";
-// const KEY = "%2021853e04836d6e48c165e80678b3984a";
-// const DOMAIN2 = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true`
+const tappasButton = document.querySelector("#Tappas");
+const tappasDiv = document.querySelector("#Tappas-Cntainer")
+const ID = "4874856d";
+const KEY = "%2021853e04836d6e48c165e80678b3984a";
+const DOMAIN2 = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true`
 
-// async function fetchData(tappas) {
-//   try {
-//     const url = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=${ID}&app_key=${KEY}&random=true`;
-//     const response = await axios.get(url);
-//     const tappasData = response.data;
-//     showTappasData(tappasData);
-//   } catch (error) {
-//     }
+async function fetchData(tappas) {
+  try {
+    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=${ID}&app_key=${KEY}&random=true`;
+    const response = await axios.get(url);
+    const tappasData = response.data;
+    showTappasData(tappasData);
+  } catch (error) {
+    }
+}
+
+function showTappasData(data) {
+  console.log(data);
+
+  const tappasName = document.querySelector("#Tappas-Container")
+  data.recipes.forEach(tappas => {
+    const div = document.createElement("div")
+    const h2 = document.createElement("h2")
+    h2.innerText = tappas.label
+    div.appendChild(h2)
+
+    const img = document.createElement("img")
+    img.src = recipe.images
+    div.appendChild(img)
+
+    const h3 = document.createElement("h3")
+    h3.src = recipe.url
+    div.appendChild(h3)
+
+    tappasName.appendChild(div);
+  })
+
+  tappasName.innerText = `${tappas.recipe[0].lable}`;
+  tappasDiv.appendChild(tappasName);
+
+
+} 
+
+tappasButton.addEventListener("submit", handleSubmit);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   console.log()
 // }
-
-// function showTappasData(info) {
-//   console.log(info);
-
-//   const tappasName = document.querySelector("#Tappas-Container")
-//   info.recipes.forEach(tappas => {
-//     const div = document.createElement("div")
-//     const h2 = document.createElement("h2")
-//     h2.innerText = tappas.label
-//     div.appendChild(h2)
-
-//     tappasName.appendChild(div);
-//   })
-
-
-// } 
 
 
 async function fetchData(drink) {
