@@ -4,55 +4,50 @@ const drinkDiv = document.querySelector("#drink-container");
 const searchForm = document.querySelector("#drink-form");
 const drinkSearchInput = document.querySelector("#drink-search");
 
-const tappasButton = document.querySelector("#Tappas");
-const tappasDiv = document.querySelector("#Tappas-Cntainer")
+const tappasDiv = document.querySelector("#tappas-container")
 const ID = "4874856d";
 const KEY = "%2021853e04836d6e48c165e80678b3984a";
 const DOMAIN2 = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true`
 
-async function fetchData(tappas) {
-  try {
-    const url = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=${ID}&app_key=${KEY}&random=true`;
-    const response = await axios.get(url);
-    const tappasData = response.data;
-    showTappasData(tappasData);
-  } catch (error) {
-    }
+const displayTappas = (tappas) => {
+  tappasDiv.innerHTML = "";
+  console.log(tappas);
+  tappas.forEach((app) => {
+    console.log(app.hits.recipe.label)
+    console.log(app.hits.recipe.REGULAR.url)
+    let h3 = document.createElement("h3")
+    h3.innerText = `${app.hits.recipe.label}`;
+    tappasDiv.appendChild(h3)
+
+    let img = document.createElement("img");
+    img.src = app.hits.recipe.REGULAR.url;
+    img.alt = app.hits.recipe.label;
+    tappasDiv.appendChild(img);
+
+    let h2 = document.createElement("h2");
+    h2.innerText = `${app.hits.recipe.url}`;
+    tappasDiv.appendChild(h2)
+  });
 }
 
-function showTappasData(data) {
-  console.log(data);
+const fetchTappas = () => {
+  axios
+    .get("https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true")
+    .then((response) => {
+      let tappas = response.data.results;
+      displayUsers(tappas);
+    })
+    .catch((error) => {
+      console.log("HELLO THIS IS AN ERROR");
+      console.log(error);
+    })
+    .finally(() => console.log("done"));
+};
 
-  const tappasName = document.querySelector("#Tappas-Container")
-  data.recipes.forEach(tappas => {
-    const div = document.createElement("div")
-    const h2 = document.createElement("h2")
-    h2.innerText = tappas.label
-    div.appendChild(h2)
+const tappasButton = document.querySelector("#tappas-container");
+tappasButton.addEventListener("click", fetchTappas);
 
-    const img = document.createElement("img")
-    img.src = recipe.images
-    div.appendChild(img)
-
-    const h3 = document.createElement("h3")
-    h3.src = recipe.url
-    div.appendChild(h3)
-
-    tappasName.appendChild(div);
-  })
-
-  tappasName.innerText = `${tappas.recipe[0].lable}`;
-  tappasDiv.appendChild(tappasName);
-
-
-} 
-
-tappasButton.addEventListener("submit", handleSubmit);
-
-// function handleSubmit(event) {
-//   event.preventDefault();
-//   console.log()
-// }
+////////////////////////////////////////////////////////////
 
 
 async function fetchData(drink) {
@@ -75,10 +70,6 @@ function showDrinkData(data) {
     const h2 = document.createElement("h2")
     h2.innerText = drink.strDrink
     div.appendChild(h2)
-
-    const img = document.createElement("img")
-    img.src = drink.strDrinkThumb
-    div.appendChild(img)
 
     const h4 = document.createElement("h4")
     h4.innerText = drink.strGlass
@@ -107,6 +98,10 @@ function showDrinkData(data) {
     const h3 = document.createElement("p1")
     h3.innerText = drink.strInstructions
     div.appendChild(h3)
+
+    const img = document.createElement("img")
+    img.src = drink.strDrinkThumb
+    div.appendChild(img)
 
     drinkName.appendChild(div)
   });

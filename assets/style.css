@@ -1,15 +1,10 @@
+
+
 body {
     height: fit-content;
     background-color: lightpink;
-    background-position: center;
-    
+    background-position: center;    
 }
-
-@media(max-width: 600px) {
-    body {
-      background-color: rgb(236, 243, 245);
-    }
-  }
 
 header{
     height: 10vh;
