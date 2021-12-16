@@ -4,7 +4,36 @@ const drinkDiv = document.querySelector("#drink-container");
 const searchForm = document.querySelector("#drink-form");
 const drinkSearchInput = document.querySelector("#drink-search");
 
-const tappasButton = document.querySelector("#Tappas");
+// const tappasButton = document.querySelector("#Tappas");
+// const ID = "4874856d";
+// const KEY = "%2021853e04836d6e48c165e80678b3984a";
+// const DOMAIN2 = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true`
+
+// async function fetchData(tappas) {
+//   try {
+//     const url = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=${ID}&app_key=${KEY}&random=true`;
+//     const response = await axios.get(url);
+//     const tappasData = response.data;
+//     showTappasData(tappasData);
+//   } catch (error) {
+//     }
+// }
+
+// function showTappasData(info) {
+//   console.log(info);
+
+//   const tappasName = document.querySelector("#Tappas-Container")
+//   info.recipes.forEach(tappas => {
+//     const div = document.createElement("div")
+//     const h2 = document.createElement("h2")
+//     h2.innerText = tappas.label
+//     div.appendChild(h2)
+
+//     tappasName.appendChild(div);
+//   })
+
+
+// } 
 
 
 async function fetchData(drink) {
@@ -32,9 +61,9 @@ function showDrinkData(data) {
     img.src = drink.strDrinkThumb
     div.appendChild(img)
 
-    const h3 = document.createElement("h3")
-    h3.innerText = drink.strGlass
-    div.appendChild(h3)
+    const h4 = document.createElement("h4")
+    h4.innerText = drink.strGlass
+    div.appendChild(h4)
 
     for (const [key, value] of Object.entries(drink)) {
      if (key.includes("strIngredient")) {
@@ -46,7 +75,7 @@ function showDrinkData(data) {
      } 
     }
 
-    const p1 = document.createElement("p1")
+    const h3 = document.createElement("p1")
     h3.innerText = drink.strInstructions
     div.appendChild(h3)
 
@@ -74,11 +103,11 @@ function handleSubmit(event) {
   drinkSearchInput.value = "";
   console.log(inputValue);
   fetchData(inputValue);
-  removeData();
+  // removeData();
 }
 
-function removeData() {
-  drinkDiv.innerHTML = "";
-}
+// function removeData() {
+//   drinkDiv.innerHTML = "";
+// }
 
 
