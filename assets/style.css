@@ -1,5 +1,5 @@
 /* body {
-    height: 185vh;
+    height: fit-content;
     background-image: url("https://images.unsplash.com/photo-1582837611539-e3020079eab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=914&q=80");
     background-position: center;
     background-size: cover;
@@ -34,22 +34,26 @@ header{
     text-size-adjust: 20px;
 }
 
-#Cocktail-Result {
+
+#drink-form {
     display: flex;
-    width: auto;
-    height: 200px;
-    border: 5px dashed rgba(42, 36, 61, 0.986);
-    padding: 50px;
-    margin: 25px 50px 75px 100px;
+    justify-content: center;
+    
 }
 
-#Tappas-Result {
-    display: flex;  
-    width: auto;
-    height: fit-content;
-    border: 5px dashed rgba(42, 36, 61, 0.986);
-    padding: 50px;
-    margin: 15px 50px 75px 100px;
+#drink-result {
+
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin: 0 0 0 300px ;
+    text-align: left;
+    text-orientation: sideways-right;
+    
+}
+img {
+    height: 300px;
+    align-content: center;
 }
 
 /* footer {
