@@ -4,6 +4,9 @@ const drinkDiv = document.querySelector("#drink-container");
 const searchForm = document.querySelector("#drink-form");
 const drinkSearchInput = document.querySelector("#drink-search");
 
+const tappasButton = document.querySelector("#Tappas");
+
+
 async function fetchData(drink) {
   try {
     const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`;
@@ -29,6 +32,10 @@ function showDrinkData(data) {
     img.src = drink.strDrinkThumb
     div.appendChild(img)
 
+    const h3 = document.createElement("h3")
+    h3.innerText = drink.strGlass
+    div.appendChild(h3)
+
     for (const [key, value] of Object.entries(drink)) {
      if (key.includes("strIngredient")) {
        if (value) {
@@ -39,10 +46,9 @@ function showDrinkData(data) {
      } 
     }
 
-    const h4 = document.createElement("h4")
-    h4.innerText = drink.strInstructions
-    div.appendChild(h4)
-
+    const p1 = document.createElement("p1")
+    h3.innerText = drink.strInstructions
+    div.appendChild(h3)
 
     drinkName.appendChild(div)
   });
@@ -68,7 +74,11 @@ function handleSubmit(event) {
   drinkSearchInput.value = "";
   console.log(inputValue);
   fetchData(inputValue);
+  removeData();
 }
 
+function removeData() {
+  drinkDiv.innerHTML = "";
+}
 
 
