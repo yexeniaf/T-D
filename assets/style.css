@@ -76,19 +76,18 @@ nav button {
     padding-bottom: 10px;
 }
 
-
-#drink-result {
+.drinkCard {
     display: flex;
+    background-color: rgba(247, 247, 247, 0.644);
     flex-direction: column;
-    font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    text-orientation: center;
-    /* align-items: baseline; */
-    color: rgb(10, 3, 3);
-    background-color: rgba(255, 255, 255, 0.521);    
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-bottom: 10px;
+    font-size: 18px;
 }
 
-/* #drink-result img {
-    height: 200px;
-    float: right;    
-} */
+#drink-result img {
+    height: 250px; 
+}
