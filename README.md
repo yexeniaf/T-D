@@ -80,29 +80,40 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML | H | 3hrs|  |  |
-| CSS | H | 3hrs|  |  |
-| JAVASCRIPT | H | 4hrs|  |  |
-| API | H |2hrs|  |  |
-|LAYOUT| H | 4hrs|  |  |
-|IMAGES| H | 4hrs| | |
-|DEBUGGING| H | 3hrs | | |
-| DATA CONNECTION | H | 6hrs|  |  |
-| CCS DESIGN | H | 5hrs|  |  |
-| ADVANCE DEGISN | L | 1hr|  |  |
-| MORE BUTTONS| M | 1hr| | |
-| TESTING| H | 3hrs | | |
-|POSTMVP| L | 3hrs | | |
-| Total | H | 45hrs|  |  |
+| HTML | H | 3hrs| 3hrs | 3hrs |
+| CSS | H | 3hrs| 4.5hr | 4.5hrs |
+| JAVASCRIPT | H | 4hrs| 7hrs | 7hr |
+| API | H |2hrs| 3hrs | 3hrs |
+|LAYOUT| H | 4hrs| 4hrs | 4hrs |
+|IMAGES| H | 4hrs| 3hrs | 3hrs |
+|DEBUGGING| H | 3hrs | 3.5 hrs | 3.5hrs |
+| DATA CONNECTION | H | 6hrs| 7hrs | 7hrs |
+| CCS DESIGN | H | 5hrs| 4.5hrs | 4.5hrs |
+| ADVANCE DEGISN | L | 1hr| 1hr | 1hr |
+| MORE BUTTONS| M | 1hr| 0hrs| 0hrs |
+| TESTING| H | 3hrs | 4.5 hrs | 4.5 hrs |
+|POSTMVP| L | 3hrs | 1hr | 1hr |
+| Total | H | 45hrs| 46hrs | 46hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+I am proud of this code snippet that Shay helped me on because despite the complexity of it, I understood what it is doing. Because my ingredients and measurements were in different keys, I had to loop through the array twice in order to get them in the same line.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+ for (const [key, value] of Object.entries(drink)) {
+      if (key.includes("strIngredient")) {
+        if (value) {
+          const num = key.split('strIngredient')
+          const h3 = document.createElement("h3")
+          if (drink[`strMeasure${num[1]}`]) {
+            h3.innerText = `${drink[`strMeasure${num[1]}`]} ${value}`
+          } else {
+           h3.innerText = value
+          }
+          div.appendChild(h3)
+        }
+      } 
+     }
 ```
 
 ## Change Log
