@@ -71,6 +71,7 @@ nav button {
     margin-bottom: 70px;
     margin-left: 90px;
     margin-right: 90px;
+    font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 25px;
     padding-bottom: 10px;
 }
@@ -81,6 +82,7 @@ nav button {
     /* align-content: flex-start; */
     flex-direction: column;
     margin: 0 0 0 300px;
+    font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: left;
     text-orientation: left;
     justify-content: center;
