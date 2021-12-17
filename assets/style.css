@@ -1,13 +1,11 @@
-
-
 body {
     background-image: url("https://images.unsplash.com/photo-1512006410192-5e496c2c207b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
     background-size: cover ;
     background-repeat: no-repeat;   
 }
 
-header{
-    height: 8vh;
+header {
+    height: 10vh;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -17,7 +15,8 @@ header{
     padding: 10px;
     color: rgb(253, 253, 253);
     background-color: maroon;
-  }
+    border-radius: 10px;
+}
 
 nav button {
     font-size: 15px;
@@ -62,9 +61,7 @@ nav button {
     
     
 }
-img {
-   
-}
+
 
 /* footer {
     margin-top: 100px;
