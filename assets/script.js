@@ -12,7 +12,6 @@ const DOMAIN2 = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_i
 const displayTappas = (tappas) => {
   tappasDiv.innerHTML = "";
   console.log(tappas);
-  // tappas.forEach((app) => {
     let h3 = document.createElement("h3")
     h3.innerText = `${tappas[0].recipe.label}`;
     tappasDiv.appendChild(h3)
@@ -26,11 +25,9 @@ const displayTappas = (tappas) => {
     img.src = tappas[0].recipe.images.REGULAR.url;
     img.alt = tappas[0].recipe.label;
     tappasDiv.appendChild(img);
-  // });
 }
 
 const fetchTappas = () => {
-  console.log("here")
   axios
     .get("https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true")
     .then((response) => {
@@ -63,11 +60,9 @@ async function fetchData(drink) {
 
 
 function showDrinkData(data) {
-  console.log(data.drinks[0]);
   const drink = data.drinks[0];
 
   const drinkName = document.querySelector("#drink-result")
-  // data.drinks.forEach(drink => {
     const div = document.createElement("div")
     div.classList.add("drinkCard")
     const h2 = document.createElement("h2")
@@ -103,16 +98,12 @@ function showDrinkData(data) {
     div.appendChild(img)
 
     drinkName.appendChild(div)
-    console.log(div);
-  // });
+  
 
-
-  // drinkName.innerText = `${drink.strDrink}`;
   drinkDiv.appendChild(drinkName);
 
   const drinkImg = document.createElement("img");
   drinkImg.src = drink.strDrinkThumb.jpg;
-  console.dir(drinkImg);
   drinkImg.alt = `Image of ${drink.srtDrink}`;
   drinkDiv.appendChild(drinkImg);
 }
@@ -122,10 +113,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-  console.log(drinkSearchInput.value);
   let inputValue = drinkSearchInput.value;
   drinkSearchInput.value = "";
-  console.log(inputValue);
   fetchData(inputValue);
   removeData();
 }
