@@ -135,5 +135,3 @@ function removeData() {
 const drinkCard = document.querySelector(".drinkCard")
   drinkCard.remove();
  }
-
-
