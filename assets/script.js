@@ -1,6 +1,6 @@
 
 const DOMAIN = 'https://www.thecocktaildb.com';
-const drinkDiv = document.querySelector("#drink-container");
+const drinkDiv = document.querySelector("#drink-result");
 const searchForm = document.querySelector("#drink-form");
 const drinkSearchInput = document.querySelector("#drink-search");
 
@@ -17,15 +17,15 @@ const displayTappas = (tappas) => {
     h3.innerText = `${tappas[0].recipe.label}`;
     tappasDiv.appendChild(h3)
 
-    let img = document.createElement("img");
-    img.src = tappas[0].recipe.images.REGULAR.url;
-    img.alt = tappas[0].recipe.label;
-    tappasDiv.appendChild(img);
-
     let a = document.createElement("a");
     a.href = `${tappas[0].recipe.url}`;
     a.innerText = "Click Here"
     tappasDiv.appendChild(a)
+
+    let img = document.createElement("img");
+    img.src = tappas[0].recipe.images.REGULAR.url;
+    img.alt = tappas[0].recipe.label;
+    tappasDiv.appendChild(img);
   // });
 }
 
@@ -63,17 +63,19 @@ async function fetchData(drink) {
 
 
 function showDrinkData(data) {
-  console.log(data);
+  console.log(data.drinks[0]);
+  const drink = data.drinks[0];
 
   const drinkName = document.querySelector("#drink-result")
   // data.drinks.forEach(drink => {
     const div = document.createElement("div")
+    div.classList.add("drinkCard")
     const h2 = document.createElement("h2")
     h2.innerText = drink.strDrink
     div.appendChild(h2)
 
     const h4 = document.createElement("h4")
-    h4.innerText = drink.strGlass
+    h4.innerText = `Glass type: ${drink.strGlass}`
     div.appendChild(h4)
 
 
@@ -101,16 +103,17 @@ function showDrinkData(data) {
     div.appendChild(img)
 
     drinkName.appendChild(div)
+    console.log(div);
   // });
 
 
-  drinkName.innerText = `${data.drinks[i].strDrink}`;
+  // drinkName.innerText = `${drink.strDrink}`;
   drinkDiv.appendChild(drinkName);
 
   const drinkImg = document.createElement("img");
-  drinkImg.src = data.drinks.strDrinkThumb.jpg;
+  drinkImg.src = drink.strDrinkThumb.jpg;
   console.dir(drinkImg);
-  drinkImg.alt = `Image of ${data.drinks.srtDrink}`;
+  drinkImg.alt = `Image of ${drink.srtDrink}`;
   drinkDiv.appendChild(drinkImg);
 }
 
@@ -124,11 +127,13 @@ function handleSubmit(event) {
   drinkSearchInput.value = "";
   console.log(inputValue);
   fetchData(inputValue);
-  // removeData();
+  removeData();
 }
 
-// function removeData() {
-//   drinkDiv.innerHTML = "";
-// }
+
+function removeData() {
+const drinkCard = document.querySelector(".drinkCard")
+  drinkCard.remove();
+ }
 
 

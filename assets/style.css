@@ -1,13 +1,13 @@
 
 
 body {
-    height: fit-content;
-    background-color: lightpink;
-    background-position: center;    
+    background-image: url("https://images.unsplash.com/photo-1512006410192-5e496c2c207b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover ;
+    background-repeat: no-repeat;   
 }
 
 header{
-    height: 10vh;
+    height: 8vh;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -19,19 +19,17 @@ header{
     background-color: maroon;
   }
 
-
+nav button {
+    font-size: 15px;
+    padding: 10px;
+    
+}
 
 #About {
     text-align: center;
     display: flex;
     padding: 30px;
     color: rgb(255, 255, 255);
-}
-
-  
-#About-Us {
-    color: green;
-    text-size-adjust: 20px;
 }
 
 
@@ -41,23 +39,31 @@ header{
     
 }
 
+#tappas-container {
+    image-orientation: right;
+    padding: 20px;
+}
+
+#tappas-container a {
+    align-items: flex-end;
+}
+
 #drink-result {
 
     display: flex;
-    align-content: flex-end;
-    flex-direction: row;
+    align-content: flex-start;
+    flex-direction: column;
     margin: 0 0 0 300px;
     text-align: left;
     text-orientation: center;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: baseline;
+    color: white;
     
     
 }
 img {
-    height: 300px;
-    align-content: center;
+   
 }
 
 /* footer {
