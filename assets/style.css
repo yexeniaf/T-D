@@ -75,9 +75,10 @@ nav button {
     margin-left: 150px;
     margin-right: 150px;
     font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 23px;
+    font-size: 15px;
     padding-bottom: 10px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .drinkCard {
@@ -92,6 +93,7 @@ nav button {
     font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     text-align: center;
+    border-radius: 10px;
 }
 
 #drink-result img {
