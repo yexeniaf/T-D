@@ -36,9 +36,10 @@ header {
     max-width: 100vw;
     padding: 10px;
     color: rgb(253, 253, 253);
-    font-family:  -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-family: 'Corinthia';
     background-color: rgb(209, 114, 6);
     border-radius: 10px;
+    font-size: 50px;
 }
 
 nav button {
