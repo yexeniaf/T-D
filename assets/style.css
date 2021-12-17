@@ -81,6 +81,14 @@ nav button {
     border-radius: 10px;
 }
 
+#tappas-container a {
+    color: black;
+    border-color: rgb(209, 114, 6);
+    margin-bottom: 5px;
+    padding: 5px;
+    border-style: dashed;
+}
+
 .drinkCard {
     display: flex;
     background-color: rgba(247, 247, 247, 0.644);

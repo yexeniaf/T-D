@@ -11,7 +11,6 @@ const DOMAIN2 = `https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_i
 
 const displayTappas = (tappas) => {
   tappasDiv.innerHTML = "";
-  console.log(tappas);
     let h3 = document.createElement("h3")
     h3.innerText = `${tappas[0].recipe.label}`;
     tappasDiv.appendChild(h3)
@@ -31,7 +30,6 @@ const fetchTappas = () => {
   axios
     .get("https://api.edamam.com/api/recipes/v2?type=public&q=snack&app_id=4874856d&app_key=%2021853e04836d6e48c165e80678b3984a&random=true")
     .then((response) => {
-      console.log(response)
       let tappas = response.data.hits;
       displayTappas(tappas);
     })
