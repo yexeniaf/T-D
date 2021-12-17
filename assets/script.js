@@ -18,7 +18,7 @@ const displayTappas = (tappas) => {
 
     let a = document.createElement("a");
     a.href = `${tappas[0].recipe.url}`;
-    a.innerText = "Click Here"
+    a.innerText = "Full Recipe Here"
     tappasDiv.appendChild(a)
 
     let img = document.createElement("img");
